@@ -70,5 +70,7 @@ python main.py
 👨‍💻 Autor
 
 Rodrigo Fortes dos Santos
+
 https://www.linkedin.com/in/rodrigofortes
+
 Profissional de Tecnologia com 20 anos de experiência em Infraestrutura/Segurança, em transição para o Desenvolvimento de Software e Engenharia de Dados.
