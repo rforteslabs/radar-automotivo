@@ -45,8 +45,10 @@ Todos os dados extraídos pelo script em Python são alimentados automaticamente
 ### 📸 Visualização do Dashboard
 *(Confira abaixo algumas telas do dashboard em funcionamento)*
 
-![Visão Geral do Dashboard Automotivo]
+[Visão Geral do Dashboard Automotivo]
+
 https://github.com/rforteslabs/radar-automotivo/blob/main/dash_veiculos1.png
+
 https://github.com/rforteslabs/radar-automotivo/blob/main/dash_veiculos2.png
 
 
