@@ -6,7 +6,7 @@
 ![ETL Pipeline](https://img.shields.io/badge/Arquitetura-Pipeline_ETL-FF6F00?style=for-the-badge)
 
 ## 📌 Sobre o Projeto
-O **Radar Automotivo** é um pipeline de dados automatizado (ETL), desenvolvido em Python, com o objetivo de monitorar anúncios de veículos em portais online de classificados.
+Este é um projeto de automação desenvolvido em **Python** focado na coleta de dados de veículos (carros e motos) anunciados em portais da internet. O sistema consome dados via API, filtra as oportunidades mais interessantes baseadas em marcas e características específicas, e armazena tudo de forma estruturada.
 
 Diferente de um simples raspador de tela (scraper), este sistema foi projetado para atuar como uma ferramenta de **Inteligência de Mercado**. Ele gerencia o estado de cada anúncio ao longo do tempo, mapeando flutuações de preços, identificando oportunidades e calculando métricas financeiras cruciais para a decisão de compra.
 
@@ -19,11 +19,36 @@ Diferente de um simples raspador de tela (scraper), este sistema foi projetado p
 * **📜 Auditoria e Logs:** Sistema profissional de logs configurado para gravar o histórico de execução, processamento e eventuais erros, facilitando o *troubleshooting*.
 * **🔐 Gestão de Configurações:** Separação total entre código e configurações. URLs, tempos de pausa e credenciais ficam isolados em um arquivo `config.ini`, seguindo as boas práticas de desenvolvimento (*12-Factor App*).
 
+
+## 🛠️ Tecnologias Utilizadas
+- **Python** (Linguagem principal)
+- **Integração de APIs** (Coleta e envio de dados)
+- **Google Sheets API** (Banco de dados e armazenamento)
+- **Google Looker Studio** (Data Visualization)
+
+
 ## 🏗️ Arquitetura do Pipeline
 
 1. **Extração (Extract):** Consumo paginado da API do portal de veículos, orquestrado a partir de uma lista configurável de marcas.
 2. **Transformação (Transform):** Limpeza de dados financeiros, extração de contatos (WhatsApp/Telefone), cálculo de depreciação e cruzamento com a base de dados histórica usando Dicionários e Pandas.
 3. **Carga (Load):** Inserção em lote (Bulk) utilizando a biblioteca `gspread_dataframe` para atualizar o Google Sheets, que atua como um banco de dados leve e acessível de qualquer lugar.
+
+
+## 📊 Dashboard Interativo (Looker Studio)
+Para transformar os dados brutos coletados em inteligência de negócio, o projeto conta com uma integração direta com o **Google Looker Studio**. 
+
+Todos os dados extraídos pelo script em Python são alimentados automaticamente em uma planilha do Google Sheets. A partir dessa base, o Dashboard no Looker Studio permite:
+- **Filtros Dinâmicos:** Buscar veículos por marca, ano, valor ou outras características desejadas.
+- **Análise Visual:** Identificar rapidamente as melhores oportunidades do mercado através de gráficos e tabelas.
+- **Acesso Facilitado:** Consultar as informações de forma interativa, sem precisar analisar o código ou planilhas extensas.
+
+### 📸 Visualização do Dashboard
+*(Confira abaixo algumas telas do dashboard em funcionamento)*
+
+![Visão Geral do Dashboard Automotivo]
+https://github.com/rforteslabs/radar-automotivo/blob/main/dash_veiculos1.png
+https://github.com/rforteslabs/radar-automotivo/blob/main/dash_veiculos2.png
+
 
 ## 🚀 Como executar o projeto localmente
 
