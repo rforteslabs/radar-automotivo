@@ -1,0 +1,35 @@
+# ==========================================
+# Ambientes Virtuais
+# ==========================================
+.venv/
+
+# ==========================================
+# Credenciais e Configurações Sensíveis
+# (NUNCA SUBIR PARA O GITHUB)
+# ==========================================
+credentials.json
+config.ini
+config_carros.ini
+config_motos.ini
+
+# ==========================================
+# Logs
+# ==========================================
+*.log
+
+# ==========================================
+# Backups e Arquivos Temporários
+# ==========================================
+bkps/
+*.bkp
+marcas_original.txt
+marcas_motos.txt
+
+# ==========================================
+# Cache e compilados do Python (Padrão)
+# ==========================================
+__pycache__/
+*.py[cod]
+*$py.class
+motos.py
+CarrosModelos.py
